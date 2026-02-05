@@ -21,8 +21,8 @@ const Home = () => {
         <h2 className="text-center text-2xl mt-5 sticky top-0 py-2 bg-white">Lists</h2>
 
         <div className="p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-          {todoData.map((todo, index) => (
-            <TodoCard key={index} todo={todo} />
+          {todoData.map((todo) => (
+            <TodoCard key={todo.id} todo={todo} />
           ))}
         </div>
       </div>

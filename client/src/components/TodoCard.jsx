@@ -11,7 +11,7 @@ const TodoCard = ({ todo }) => {
         {todo.description}
       </p>
       <div className="flex justify-center items-center mt-3 space-x-3">
-        <button onClick={()=> navigate("/update")} className="border hover:border-blue-600 px-4 py-0.5 rounded-full cursor-pointer hover:bg-blue-600 hover:text-white">
+        <button onClick={()=> navigate(`/update/${todo.id}`)} className="border hover:border-blue-600 px-4 py-0.5 rounded-full cursor-pointer hover:bg-blue-600 hover:text-white">
           Update
         </button>
         <button

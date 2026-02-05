@@ -6,7 +6,7 @@ const Navbar = () => {
     <div>
       <div className="flex justify-between items-center px-5 sm:px-10 md:px-15 lg:px-20 py-5">
         <Link to="/">
-          <img className="h-10 md:h-15 cursor-pointer" src="logo.png" alt="" />
+          <img className="h-10 md:h-15 cursor-pointer" src="./logo.png" alt="" />
         </Link>
         <div>
           <button
