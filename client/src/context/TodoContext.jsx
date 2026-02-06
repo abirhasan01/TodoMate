@@ -10,8 +10,8 @@ export const TodoContextProvider = ({ children }) => {
 
     const backendUrl = import.meta.env.VITE_BACKEND_URL;
     const [todos, setTodos] = useState([])
-    const [title, setTitle] = useState("todo title 1")
-    const [description, setDescription] = useState("todo desc 1")
+    const [title, setTitle] = useState("")
+    const [description, setDescription] = useState("")
     const navigate = useNavigate()
 
     const createTodo = async () => {
