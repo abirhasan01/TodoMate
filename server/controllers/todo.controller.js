@@ -81,6 +81,23 @@ const updateTodo = async (req, res) => {
         const { id } = req.params;
         const { title, description } = req.body;
 
+        // Fetch existing todo first
+        const { data: existingTodo, error: fetchError } = await supabase.from("todos").select().eq("id", id).single()
+        
+        if(fetchError){
+            return res.json({
+                success: false,
+                message: fetchError.message
+            })
+        }
+
+        if(existingTodo.title === title && existingTodo.description === description){
+            return res.json({
+                success: false,
+                message: "Invalid Credentials"
+            })
+        }
+
         const { error } = await supabase.from("todos").update({title, description}).eq("id", id)
         if(error){
             return res.json({

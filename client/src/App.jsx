@@ -1,15 +1,29 @@
 import { Route, Routes } from "react-router-dom";
-import Add from "./components/Add";
+import { Bounce, ToastContainer } from "react-toastify";
 import Footer from "./components/Footer";
-import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import Update from "./components/Update";
+import Add from "./pages/Add";
+import Home from "./pages/Home";
+import Update from "./pages/Update";
 
 function App() {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-100 to-purple-100">
+    <div className="min-h-screen bg-gradient-to-br from-gray-300 to-gray-400">
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        transition={Bounce}
+      />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
