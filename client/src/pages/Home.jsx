@@ -13,7 +13,7 @@ const Home = () => {
         <h2 className="text-center text-3xl font-semibold text-white mt-5 sticky top-0 py-2 backdrop-blur-md">Lists</h2>
 
         <div className="p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-          {[...todos].reverse().map((todo) => (
+          {todos.map((todo) => (
             <TodoCard key={todo.id} todo={todo} />
           ))}
         </div>
