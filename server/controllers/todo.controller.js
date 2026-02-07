@@ -3,20 +3,22 @@ const supabase = require("../config/db")
 
 const getAllTodos = async (req, res) => {
     try {
-        const { data, error } = await supabase.from("todos").select()
+      const { data, error } = await supabase
+        .from("todos")
+        .select()
+        .order("createdAt", { ascending: false });
 
-        if(error){
-            return res.json({
-                success: false,
-                message: error.message
-            })
-        }
+      if (error) {
+        return res.json({
+          success: false,
+          message: error.message,
+        });
+      }
 
-        res.json({
-            success: true,
-            data
-        })
-        
+      res.json({
+        success: true,
+        data,
+      });
     } catch (error) {
         console.log(error)
         return res.json({
