@@ -19,14 +19,14 @@ const TodoCard = ({ todo }) => {
             fetchSingleTodo(todo.id);
             navigate(`/update/${todo.id}`);
           }}
-          className="border hover:border-blue-700 text-black hover:bg-blue-700 hover:text-white px-4 py-0.5 shadow-none hover:shadow-[0_0_20px_rgb(51,51,255)] transition-all duration-200 rounded-full cursor-pointer"
+          className="border hover:border-blue-700 text-black bg-gray-300 hover:bg-blue-700 hover:text-white px-4 py-0.5 shadow-none hover:shadow-[0_0_20px_rgb(51,51,255)] transition-all duration-200 rounded-full cursor-pointer"
         >
           Update
         </button>
 
         <button
           onClick={() => deleteTodos(todo.id)}
-          className="border hover:border-red-700 text-black hover:bg-red-700 hover:text-white px-4 py-0.5 shadow-none hover:shadow-[0_0_20px_rgb(255,51,51)] transition-all duration-200 rounded-full cursor-pointer"
+          className="border hover:border-red-700 text-black bg-gray-300 hover:bg-red-700 hover:text-white px-4 py-0.5 shadow-none hover:shadow-[0_0_20px_rgb(255,51,51)] transition-all duration-200 rounded-full cursor-pointer"
         >
           Delete
         </button>
