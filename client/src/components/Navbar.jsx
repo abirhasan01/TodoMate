@@ -25,13 +25,13 @@ const Navbar = () => {
             onMouseEnter={() => setIsHover(true)}
             onMouseLeave={() => setIsHover(false)}
             onClick={() => {
-              setTitle("")
-              setDescription("")
+              setTitle("");
+              setDescription("");
               navigate("/add");
             }}
             className="px-5 flex justify-center items-center py-1 rounded-full cursor-pointer text-gray-600"
             animate={{
-              backgroundColor: isHover ? "rgb(0, 0, 0)" : "rgb(255, 255, 255)",
+              backgroundColor: isHover ? "rgb(0, 0, 0)" : "rgb(247, 242, 242)",
               color: isHover ? "rgb(255, 255, 255)" : "rgb(75, 85, 99)",
             }}
             transition={{
@@ -45,7 +45,7 @@ const Navbar = () => {
               }}
               transition={{
                 duration: 0.3,
-                delay: 0.1
+                delay: 0.1,
               }}
             >
               Add Todo
@@ -58,9 +58,9 @@ const Navbar = () => {
                 opacity: isHover ? 1 : 0,
               }}
               transition={{
-                x: {duration: 0.5},
-                rotate: {duration: 0.6},
-                opacity: {duration: 0.3}
+                x: { duration: 0.5 },
+                rotate: { duration: 0.6 },
+                opacity: { duration: 0.3 },
               }}
             >
               <IoIosAdd className="text-3xl" />
